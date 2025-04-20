@@ -60,25 +60,15 @@ naijastock_venv/
 *.csv
 
 
-## ** Set up SQLite Database
-import sqlite3
+## ** Set up SQLite Database**
+- create a folder: datavase_setup and then add file: create_db.py
+- add the script to create db 
+- run <python create_dn.py>
 
-conn = sqlite3.connect('naijastock.db')
-cursor = conn.cursor()
+## ** connect to database for data insertion**
+- create a file fetch_stock_data.py
+- run <python fetch_stock_data.py> to fetch data samples
 
-# Create table for storing stock data
-cursor.execute('''
-    CREATE TABLE IF NOT EXISTS stock_data (
-        date TEXT,
-        ticker TEXT,
-        open REAL,
-        high REAL,
-        low REAL,
-        close REAL,
-        volume INTEGER
-    )
-''')
-
-# Commit and close connection
-conn.commit()
-conn.close()
+## Viewing the data**
+- create a file view_data.py
+- add script to the file
