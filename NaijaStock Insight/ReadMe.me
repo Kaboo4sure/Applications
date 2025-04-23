@@ -72,3 +72,26 @@ naijastock_venv/
 ## Viewing the data**
 - create a file view_data.py
 - add script to the file
+
+
+## Phase 2-
+- Step 1: Signal Logic Implementation
+- to use TA-lib, Microsoft C++ Build Tool is needed. Download and install on your computer
+<https://visualstudio.microsoft.com/visual-cpp-build-tools/>
+
+<pip install TA-Lib>
+- We’ll implement the following stock signal generation logic:
+
+  - Momentum: Check if the stock has a positive 5-day return.
+
+  - RSI: Calculate and check if it’s below 70.
+
+  - MACD: Calculate the MACD and check for a bullish crossover.
+
+   - Volume Spike: Check if today's volume exceeds the 20-day average volume.
+
+- Step 2: Add Signal Score to Data
+- We will add a column signal_score to the DataFrame, which will store the computed score based on the above criteria. A BUY signal is considered if the score is above a certain threshold.
+
+- Step 3: Highlight Buy Signals on the Charts
+- We will modify the chart plotting so that BUY signals are highlighted with a distinct color.
